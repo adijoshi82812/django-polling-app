@@ -12,17 +12,17 @@ Step 2 : Open shell for the django-polls-app directory \
 Step 3 : Start the virtual env shell using pipenv shell command \
 Step 4 : cd into mysite \
 Step 5 : Run Command -- $ python manage.py runserver \
-Step 6 : Open http://127.0.0.1:8000/polls/ on your browser \
+Step 6 : Open http://127.0.0.1:8000/polls/ on your browser 
 
 ## How to modify the project
 Firstly update the secret key in the settings.py \
-Use any code editor to Modify the setting of the project \
+Use any code editor to Modify the setting of the project 
 
 ## How to add more questions and choices
 Step 1 : Open http://127.0.0.1:8000/admin/ on your browser \
 Step 2 : Use credentials {username = admin} {password = admin} to Login \
 Now, Click the questions link to add new questions \
-Or, Click the choices link to add choices for a question \
+Or, Click the choices link to add choices for a question 
 
 ### Author & Copyright
 This app is written by Aditya Joshi \
