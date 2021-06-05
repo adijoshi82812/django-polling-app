@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Details for {{ q.question_text }}</title>
 </head>
+
 <body>
     <header>
         <h1>Votes for {{ q.question_text }}</h1>
     </header>
     <main>
-        <ul>
-        {% for c in q.choice_set.all %}
-            <li>{{ c.choice_text }}</li>
-        {% endfor %}
-        </ul>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        <form action="{% url 'polls:votes' q.id %}" method="POST">
+            {% csrf_token %}
+            {% for c in q.choice_set.all %}
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ c.id }}" />
+            <label for="choice{{ forloop.counter }}">{{ c.choice_text }}</label>
+            <br />
+            {% endfor %}
+            <input type="submit" value="Vote" />
+        </form>
     </main>
     <footer>
         <p>Written by Aditya Joshi &copy; Joshi's</p>
     </footer>
 </body>
+
 </html>
