@@ -2,10 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Question, Choice
 
-def index(response):
+def index(request):
     list_of_question = Question.objects.order_by('-pub_date')
-    output = ', '.join([q.question_text for q in list_of_question])
-    return HttpResponse(output)
+    context = {'list_of_question' : list_of_question}
+    return render(request, 'polls/index.html', context)
 
 def detail(request, question_id):
     return HttpResponse("You are viewing question %s." % question_id)

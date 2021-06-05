@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Questions Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to django Polling App</h1>
+    </header>
+    <main>
+        <h2>Questions</h2>
+        {% if list_of_question %}
+        <ul>
+            {% for q in list_of_question %}
+            <li><a href="/polls/{{ q.id }}">{{ q.question_text }}</a></li>
+            {% endfor %}
+        </ul>
+
+        {% else %}
+        <p>Sorry, No polls available</p>
+
+        {% endif %}
+    </main>
+    <footer>
+        <p>Written by Aditya Joshi &copy; Joshi's</p>
+    </footer>
+</body>
+
+</html>
