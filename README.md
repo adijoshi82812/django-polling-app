@@ -1,5 +1,5 @@
-## Python Django Project
-# Simple Polling App
+# Python Django Project
+## Simple Polling App
 This is a simple polling app written in python-django. \
 This app lets user vote for a particular question. \
 Sqlite database is used to make the database calls. \
