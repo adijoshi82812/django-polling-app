@@ -16,7 +16,7 @@
         {% if list_of_question %}
         <ul>
             {% for q in list_of_question %}
-            <li><a href="/polls/{{ q.id }}">{{ q.question_text }}</a></li>
+            <li><a href="{% url 'polls:detail' q.id %}">{{ q.question_text }}</a></li>
             {% endfor %}
         </ul>
 
