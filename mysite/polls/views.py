@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from .models import Question, Choice
 
 def index(request):
@@ -8,7 +8,11 @@ def index(request):
     return render(request, 'polls/index.html', context)
 
 def detail(request, question_id):
-    return HttpResponse("You are viewing question %s." % question_id)
+    try:
+        q = Question.objects.get(pk=question_id)
+    except Question.DoesNotExist:
+        raise Http404("Question Does not exists")
+    return render(request, 'polls/detail.html', {'q' : q})
 
 def results(request, question_id):
     response = "You are viewing results for question %s."

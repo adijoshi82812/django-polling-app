@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Details for {{ q.question_text }}</title>
+</head>
+<body>
+    <header>
+        <h1>Votes for {{ q.question_text }}</h1>
+    </header>
+    <main>
+        <ul>
+        {% for c in q.choice_set.all %}
+            <li>{{ c.choice_text }}</li>
+        {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        <p>Written by Aditya Joshi &copy; Joshi's</p>
+    </footer>
+</body>
+</html>
