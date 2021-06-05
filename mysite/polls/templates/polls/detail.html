@@ -12,6 +12,7 @@
         <h1>Votes for {{ q.question_text }}</h1>
     </header>
     <main>
+        <a href="{% url 'polls:results' q.id %}"><button>View Results</button></a><br />
         {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
         <form action="{% url 'polls:votes' q.id %}" method="POST">
             {% csrf_token %}
