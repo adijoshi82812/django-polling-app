@@ -1,30 +1,80 @@
-# Python Django Project
-## Simple Polling App
-This is a simple polling app written in python-django. \
-This app lets user vote for a particular question. \
-Sqlite database is used to make the database calls. \
-All the necessary opertations are handled by python-django. \
-Feel free to check this project for reference.
 
-## Usage for the project
-Step 1 : Clone the project at your local machine \
-Step 2 : Open shell for the django-polls-app directory \
-Step 3 : Start the virtual env shell using pipenv shell command \
-Step 4 : cd into mysite \
-Step 5 : Run Command -- $ python manage.py runserver \
-Step 6 : Open http://127.0.0.1:8000/polls/ on your browser 
+# Django Polling App
 
-## How to modify the project
-Firstly update the secret key in the settings.py \
-Use any code editor to Modify the setting of the project 
+A Simple Django app which fetchs data from sqlite database to perform CRUD operations.
+## Appendix
 
-## How to add more questions and choices
-Step 1 : Open http://127.0.0.1:8000/admin/ on your browser \
-Step 2 : Use credentials {username = admin} {password = admin} to Login \
-Now, Click the questions link to add new questions \
-Or, Click the choices link to add choices for a question 
+This app is written using python-django framework which does not use any framework for frontend. All the UI is build using simple html and css.
+## Authors
 
-### Author & Copyright
-This app is written by Aditya Joshi \
-Modifying and publishing this project can be done using copyright text \
-Copyright Aditya Joshi &copy; Joshi's
+- [@Aditya Joshi](https://www.github.com/adijoshi82812)
+
+  
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`django-admin`
+## Features
+
+- View all the questions on the main page.
+- Add new questions using admin site.
+- Vote for a particular question.
+- View Results for a question.
+
+  
+## Feedback
+
+If you have any feedback, please reach out to me at adijoshi82812@gmail.com
+
+  
+## 🚀 About Me
+I'm a full stack developer. I use python-django at the Back End and react.js at the Front End.
+
+  
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/adijoshi82812/django-polling-app.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Create virtual env
+
+```bash
+  python3 -m venv mysite-env
+```
+
+Activate virtual env
+
+```bash
+  source mysite-env/bin/activate
+```
+
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
+Start the server
+
+```bash
+  python3 manage.py runserver
+```
+
+  
+## Screenshots
+
+![App Screenshot](https://raw.githubusercontent.com/adijoshi82812/django-polling-app/main/screenshots/1.png)
+![App Screenshot](https://raw.githubusercontent.com/adijoshi82812/django-polling-app/main/screenshots/2.png)
+![App Screenshot](https://raw.githubusercontent.com/adijoshi82812/django-polling-app/main/screenshots/3.png)
+
+  
