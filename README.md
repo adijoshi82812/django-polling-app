@@ -36,7 +36,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd my-site
+  cd mysite
 ```
 
 Create virtual env
@@ -54,7 +54,7 @@ Activate virtual env
 Install dependencies
 
 ```bash
-  pip install -r requirements.txt
+  pip install -r requirement.txt
 ```
 
 Start the server
