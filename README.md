@@ -8,7 +8,6 @@ This app is written using python-django framework which does not use any framewo
 ## Authors
 
 - [@Aditya Joshi](https://www.github.com/adijoshi82812)
-- 
 ## Features
 
 - View all the questions on the main page.
