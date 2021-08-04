@@ -8,13 +8,7 @@ This app is written using python-django framework which does not use any framewo
 ## Authors
 
 - [@Aditya Joshi](https://www.github.com/adijoshi82812)
-
-  
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`django-admin`
+- 
 ## Features
 
 - View all the questions on the main page.
